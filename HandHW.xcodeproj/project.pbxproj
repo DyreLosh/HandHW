@@ -14,6 +14,9 @@
 		27C8B69E2E2F7372004269A9 /* HandHWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B69D2E2F7372004269A9 /* HandHWTests.swift */; };
 		27C8B6A82E2F7373004269A9 /* HandHWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B6A72E2F7373004269A9 /* HandHWUITests.swift */; };
 		27C8B6AA2E2F7373004269A9 /* HandHWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B6A92E2F7373004269A9 /* HandHWUITestsLaunchTests.swift */; };
+		27C8B6BB2E2F7511004269A9 /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B6BA2E2F7511004269A9 /* StorageTests.swift */; };
+		27C8B6BD2E2F83EC004269A9 /* MaskFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B6BC2E2F83EC004269A9 /* MaskFormatter.swift */; };
+		27C8B6BF2E2F8405004269A9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8B6BE2E2F8405004269A9 /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		27C8B6A32E2F7373004269A9 /* HandHWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandHWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C8B6A72E2F7373004269A9 /* HandHWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandHWUITests.swift; sourceTree = "<group>"; };
 		27C8B6A92E2F7373004269A9 /* HandHWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandHWUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27C8B6BA2E2F7511004269A9 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
+		27C8B6BC2E2F83EC004269A9 /* MaskFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFormatter.swift; sourceTree = "<group>"; };
+		27C8B6BE2E2F8405004269A9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				27C8B68E2E2F736F004269A9 /* ContentView.swift */,
 				27C8B6902E2F7372004269A9 /* Assets.xcassets */,
 				27C8B6922E2F7372004269A9 /* Preview Content */,
+				27C8B6BC2E2F83EC004269A9 /* MaskFormatter.swift */,
+				27C8B6BE2E2F8405004269A9 /* Storage.swift */,
 			);
 			path = HandHW;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				27C8B69D2E2F7372004269A9 /* HandHWTests.swift */,
+				27C8B6BA2E2F7511004269A9 /* StorageTests.swift */,
 			);
 			path = HandHWTests;
 			sourceTree = "<group>";
@@ -258,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C8B68F2E2F736F004269A9 /* ContentView.swift in Sources */,
+				27C8B6BD2E2F83EC004269A9 /* MaskFormatter.swift in Sources */,
 				27C8B68D2E2F736F004269A9 /* HandHWApp.swift in Sources */,
+				27C8B6BF2E2F8405004269A9 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C8B69E2E2F7372004269A9 /* HandHWTests.swift in Sources */,
+				27C8B6BB2E2F7511004269A9 /* StorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
