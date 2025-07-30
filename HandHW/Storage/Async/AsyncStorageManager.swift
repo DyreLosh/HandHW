@@ -11,15 +11,15 @@ final class AsyncStorageManager {
         self.strategy = strategy
     }
 
-    func store<T: Codable>(_ value: T, forKey key: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        strategy.store(value, forKey: key, completion: completion)
+    func store<T: Codable>(_ value: T, forKey key: String) async throws {
+        try await strategy.store(value, forKey: key)
     }
 
-    func retrieve<T: Codable>(forKey key: String, completion: @escaping (Result<T, Error>) -> Void) {
-        strategy.retrieve(forKey: key, completion: completion)
+    func retrieve<T: Codable>(forKey key: String) async throws -> T {
+        try await strategy.retrieve(forKey: key)
     }
-    
-    func remove(forKey key: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        strategy.remove(forKey: key, completion: completion)
+
+    func remove(forKey key: String) async throws {
+        try await strategy.remove(forKey: key)
     }
 } 

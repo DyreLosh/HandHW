@@ -2,29 +2,19 @@ import Foundation
 
 final class AsyncInMemoryStorage: AsyncStorable {
     private var storage: [String: Any] = [:]
-    private let queue = DispatchQueue(label: "com.example.asyncinmemorystorage.queue", attributes: .concurrent)
 
-    func store<T: Codable>(_ value: T, forKey key: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        queue.async(flags: .barrier) {
-            self.storage[key] = value
-            completion(.success(()))
-        }
+    func store<T: Codable>(_ value: T, forKey key: String) async throws {
+        self.storage[key] = value
     }
 
-    func retrieve<T: Codable>(forKey key: String, completion: @escaping (Result<T, Error>) -> Void) {
-        queue.async {
-            guard let value = self.storage[key] as? T else {
-                completion(.failure(StorageError.notFound))
-                return
-            }
-            completion(.success(value))
+    func retrieve<T: Codable>(forKey key: String) async throws -> T {
+        guard let value = self.storage[key] as? T else {
+            throw StorageError.notFound
         }
+        return value
     }
-    
-    func remove(forKey key: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        queue.async(flags: .barrier) {
-            self.storage.removeValue(forKey: key)
-            completion(.success(()))
-        }
+
+    func remove(forKey key: String) async throws {
+        self.storage.removeValue(forKey: key)
     }
 } 
